@@ -1,0 +1,5 @@
+"The Cube Formerly Known As Spaghetti Cube" - Emma Price, Sadaf Khansalar
+"The Cube Formerly Known As Spaghetti Cube" is a musical Rubik's cube.
+**brief description of what it does and how it works
+Last semester, we made a similar musical Rubik's cube while taking Electronics For Music, but this version was on a 2x2 cube and was wired. As one can imagine, this cube was a big, tangled mess of wires and was aptly named "Spaghetti Cube." Since we made this version of the cube wireless, we could no longer call it this name, hence "The Cube Formerly Known As Spaghetti Cube."
+We'd like to thank Victor Zappi for all his help during the original Spaghetti Cube project as well as helping us transition to this current wireless version.
