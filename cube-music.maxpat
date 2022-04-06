@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 5,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 635.0, 87.0, 1008.0, 929.0 ],
+		"rect" : [ 34.0, 77.0, 1213.0, 642.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "signal", "signal" ],
+					"patching_rect" : [ 905.0, 493.400007367134094, 55.0, 22.0 ],
+					"text" : "pan_abs"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-96",
 					"maxclass" : "newobj",
@@ -732,7 +744,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 202.799997091293335, 186.599999785423279, 155.0, 141.0 ],
+					"patching_rect" : [ 202.799997091293335, 186.599999785423279, 155.0, 144.0 ],
 					"text" : "Steps:\n1. get patch working with one note with tempo, pitch, and note length. use LFO to fake inputs\n2. get patch working with mod freq, mod indx, and panning\n3. copy for 3 notes\n4. introduce arduino inputs"
 				}
 
@@ -744,7 +756,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 202.799997091293335, 66.599999785423279, 151.0, 114.0 ],
+					"patching_rect" : [ 202.799997091293335, 66.599999785423279, 151.0, 117.0 ],
 					"text" : "pentatonic scale, across 2 octaves\n\nMajor scale: C D E G A\nMinor scale: C Eb F G Bb\n\nbutton to change btwn major and minor scales?"
 				}
 
@@ -756,7 +768,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 66.599999785423279, 150.0, 261.0 ],
+					"patching_rect" : [ 34.0, 66.599999785423279, 150.0, 269.0 ],
 					"text" : "amp mod\nreverb\ndiff instruments\n\ngyro 1: note 1 (octave1)\nx: tempo, mod freq\ny: pitch, mod indx\nz: note length, panning\n\ngyro 2: note 2 (btwn octave 1 and 2)\nx: tempo, mod freq\ny: pitch, mod indx\nz: note length, panning\n\ngyro 3: note 3 (octave2)\nx: tempo, mod freq\ny: pitch, mod indx\nz: note length, panning"
 				}
 
@@ -768,7 +780,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 16.0, 547.0, 33.0 ],
+					"patching_rect" : [ 34.0, 16.0, 547.0, 34.0 ],
 					"text" : "https://maker.pro/arduino/tutorial/how-to-send-and-receive-data-between-an-arduino-and-maxmsp\nhttps://chariscat.wordpress.com/2020/12/06/serial-communications-between-arduino-and-max/"
 				}
 
@@ -1165,8 +1177,15 @@
 		}
 ,
 		"dependency_cache" : [ 			{
+				"name" : "pan_abs.maxpat",
+				"bootpath" : "~/Documents/Spring2022/Capstone/cube-formerly-known-as-spaghetti-cube",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "synth_test.maxpat",
-				"bootpath" : "~/Documents/NEU/NEU Sem6/Capstone/cube-formerly-known-as-spaghetti-cube",
+				"bootpath" : "~/Documents/Spring2022/Capstone/cube-formerly-known-as-spaghetti-cube",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
