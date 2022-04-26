@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 1,
-			"revision" : 5,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 162.0, 87.0, 1481.0, 929.0 ],
+		"rect" : [ 34.0, 77.0, 813.0, 642.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-18",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 421.0, 133.0, 32.0, 22.0 ],
+					"text" : "print"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-1",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "int", "" ],
+					"patching_rect" : [ 425.0, 169.0, 77.0, 22.0 ],
+					"text" : "serial a 9600"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-16",
 					"maxclass" : "comment",
@@ -269,8 +293,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 795.75, 27.0, 101.0, 22.0 ],
-					"text" : "usbmodem14401"
+					"patching_rect" : [ 795.75, 27.0, 129.0, 22.0 ],
+					"text" : "COM4 (Arduino Micro)"
 				}
 
 			}
@@ -315,10 +339,10 @@
 					"id" : "obj-47",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 9,
-					"outlettype" : [ "int", "int", "int", "int", "int", "int", "int", "int", "int" ],
-					"patching_rect" : [ 609.0, 279.0, 103.0, 22.0 ],
-					"text" : "unpack i i i i i i i i i"
+					"numoutlets" : 3,
+					"outlettype" : [ "int", "int", "int" ],
+					"patching_rect" : [ 609.0, 279.0, 65.0, 22.0 ],
+					"text" : "unpack i i i"
 				}
 
 			}
@@ -377,8 +401,8 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "int", "" ],
-					"patching_rect" : [ 609.0, 91.0, 91.0, 22.0 ],
-					"text" : "serial b 140001"
+					"patching_rect" : [ 609.0, 91.0, 85.0, 22.0 ],
+					"text" : "serial d COM4"
 				}
 
 			}
@@ -425,7 +449,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 202.799997091293335, 186.599999785423279, 155.0, 141.0 ],
+					"patching_rect" : [ 202.799997091293335, 186.599999785423279, 155.0, 144.0 ],
 					"text" : "Steps:\n1. get patch working with one note with tempo, pitch, and note length. use LFO to fake inputs\n2. get patch working with mod freq, mod indx, and panning\n3. copy for 3 notes\n4. introduce arduino inputs"
 				}
 
@@ -437,7 +461,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 202.799997091293335, 66.599999785423279, 151.0, 114.0 ],
+					"patching_rect" : [ 202.799997091293335, 66.599999785423279, 151.0, 117.0 ],
 					"text" : "pentatonic scale, across 2 octaves\n\nMajor scale: C D E G A\nMinor scale: C Eb F G Bb\n\nbutton to change btwn major and minor scales?"
 				}
 
@@ -449,7 +473,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 66.599999785423279, 150.0, 261.0 ],
+					"patching_rect" : [ 34.0, 66.599999785423279, 150.0, 269.0 ],
 					"text" : "amp mod\nreverb\ndiff instruments\n\ngyro 1: note 1 (octave1)\nx: tempo, mod freq\ny: pitch, mod indx\nz: note length, panning\n\ngyro 2: note 2 (btwn octave 1 and 2)\nx: tempo, mod freq\ny: pitch, mod indx\nz: note length, panning\n\ngyro 3: note 3 (octave2)\nx: tempo, mod freq\ny: pitch, mod indx\nz: note length, panning"
 				}
 
@@ -461,7 +485,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 34.0, 16.0, 547.0, 33.0 ],
+					"patching_rect" : [ 34.0, 16.0, 547.0, 34.0 ],
 					"text" : "https://maker.pro/arduino/tutorial/how-to-send-and-receive-data-between-an-arduino-and-maxmsp\nhttps://chariscat.wordpress.com/2020/12/06/serial-communications-between-arduino-and-max/"
 				}
 
@@ -600,6 +624,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-18", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-25", 0 ],
 					"source" : [ "obj-21", 2 ]
 				}
@@ -659,6 +690,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-101", 2 ],
+					"order" : 2,
 					"source" : [ "obj-47", 2 ]
 				}
 
@@ -666,6 +698,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-101", 1 ],
+					"order" : 2,
 					"source" : [ "obj-47", 1 ]
 				}
 
@@ -673,49 +706,56 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-101", 0 ],
+					"order" : 2,
 					"source" : [ "obj-47", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-102", 0 ],
+					"order" : 1,
+					"source" : [ "obj-47", 2 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-102", 2 ],
-					"source" : [ "obj-47", 5 ]
+					"order" : 1,
+					"source" : [ "obj-47", 1 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-102", 1 ],
-					"source" : [ "obj-47", 4 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-102", 0 ],
-					"source" : [ "obj-47", 3 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-103", 2 ],
-					"source" : [ "obj-47", 8 ]
+					"order" : 1,
+					"source" : [ "obj-47", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-103", 1 ],
-					"source" : [ "obj-47", 7 ]
+					"order" : 0,
+					"source" : [ "obj-47", 2 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-103", 0 ],
-					"source" : [ "obj-47", 6 ]
+					"order" : 0,
+					"source" : [ "obj-47", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-103", 2 ],
+					"order" : 0,
+					"source" : [ "obj-47", 0 ]
 				}
 
 			}
@@ -780,21 +820,21 @@
 ,
 		"dependency_cache" : [ 			{
 				"name" : "gyro_notes.maxpat",
-				"bootpath" : "~/Documents/NEU/NEU Sem6/Capstone/cube-formerly-known-as-spaghetti-cube",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "synth_test.maxpat",
-				"bootpath" : "~/Documents/NEU/NEU Sem6/Capstone/cube-formerly-known-as-spaghetti-cube",
+				"bootpath" : "~/Documents/Spring2022/Capstone/cube-formerly-known-as-spaghetti-cube",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "pan_abs.maxpat",
-				"bootpath" : "~/Documents/NEU/NEU Sem6/Capstone/cube-formerly-known-as-spaghetti-cube",
+				"bootpath" : "~/Documents/Spring2022/Capstone/cube-formerly-known-as-spaghetti-cube",
+				"patcherrelativepath" : ".",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "synth_test.maxpat",
+				"bootpath" : "~/Documents/Spring2022/Capstone/cube-formerly-known-as-spaghetti-cube",
 				"patcherrelativepath" : ".",
 				"type" : "JSON",
 				"implicit" : 1

@@ -13,19 +13,19 @@ void loop() {
   Serial.print(' ');
 
   // gyro 2
-  Serial.print(analogRead(A3));
-  Serial.print(' ');
-  Serial.print(analogRead(A4));
-  Serial.print(' ');
-  Serial.print(analogRead(A5));
-  Serial.print(' ');
+//  Serial.print(analogRead(A3));
+//  Serial.print(' ');
+//  Serial.print(analogRead(A4));
+//  Serial.print(' ');
+//  Serial.print(analogRead(A5));
+//  Serial.print(' ');
 
   // gyro 3
-  Serial.print(analogRead(A6));
-  Serial.print(' ');
-  Serial.print(analogRead(A7));
-  Serial.print(' ');
-  Serial.print(analogRead(A8));
+//  Serial.print(analogRead(A6));
+//  Serial.print(' ');
+//  Serial.print(analogRead(A7));
+//  Serial.print(' ');
+//  Serial.print(analogRead(A8));
   Serial.println();
 
   delay(500);
